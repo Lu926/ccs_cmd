@@ -138,6 +138,15 @@ void end_of_clothoid (double x_i, double y_i,
     int skappa = sgn (kappa_i);	// signe de kappa
     double ukappa = fabs (kappa_i); // unsigned kappa
     double k1 = 0.5 * pow (ukappa, 2) / usigma;
+
+    /* NOTE:
+     * length = fabs (kappa / sigma)
+     * k2 == 0 or 2*kappa
+     *
+     * The current fresnel integral is calculated from lookup table
+     * function fresnel(k), k must be within range [0, 2]
+     */
+
     double k2 = (usigma * length + ssigma * skappa * ukappa) 
       / sqrt (Pi * usigma);
     double k3 = ukappa / sqrt (Pi * usigma);

@@ -1081,7 +1081,7 @@ SMT_CC_RS_Path *cc_circles_rs_path (SMT_CC_Circle *c1, SMT_CC_Circle *c2,
 // ############################################################################
 SMT_CC_RS_Path *cc_reeds_shepp (SMT_Configuration start, 
 				SMT_Configuration end,
-				double kappa, double sigma) {
+                double kappa, double sigma) { // NOTE: kappa and sigma are upper boundary value
   // on lance le chronometre
   start_chronometer ();
 
