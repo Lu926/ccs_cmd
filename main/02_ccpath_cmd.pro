@@ -50,7 +50,7 @@ FORMS += \
 INCLUDEPATH += ../smt \
     ../utilities
 
-LIBS += -lfltk -fopenmp
+#LIBS += -lfltk -fopenmp
 
 
 DISTFILES += \
